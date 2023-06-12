@@ -22,14 +22,16 @@ readStates <- function() {
 
     # TERRA ----
 
-    raster_list <- list()
+    temp <- c()
     exclude <- c("lat_bounds", "lon_bounds", "secma", "secmb")
     for (i in varnames[!(varnames %in% exclude)]){
-        raster_list[i] <- rast(ncfname, subds = i)[[1166]]
-        message(i, " ---> ", time(raster_list[[i]]))
+        rast_obj <- rast(ncfname, subds = i)[[1166]]
+        names(rast_obj) <- varnames(rast_obj)
+        temp <- c(temp, rast_obj)
+        message(i, " ---> ", time(rast_obj))
     }
 
-    raster_stack <- rast(raster_list)
+    raster_stack <- rast(temp)
 
     cell_area <-  rast(area_name, subds = "carea")
 
