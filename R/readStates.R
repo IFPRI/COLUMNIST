@@ -26,7 +26,7 @@ readStates <- function() {
     exclude <- c("lat_bounds", "lon_bounds", "secma", "secmb")
     for (i in varnames[!(varnames %in% exclude)]){
         rast_obj <- rast(ncfname, subds = i)[[1166]]
-        names(rast_obj) <- varnames(rast_obj)
+        names(rast_obj) <- terra::varnames(rast_obj)
         temp <- c(temp, rast_obj)
         message(i, " ---> ", time(rast_obj))
     }
