@@ -5,7 +5,7 @@ Version: 0.1.4
 Authors@R: c(
     person("Abhijeet", "Mishra", , "A.Mishra@cgiar.org", role = c("aut", "cre"))
     )
-Maintainer: Abhijeet Mishra <A.Mishra@cgiar.orf>
+Maintainer: Abhijeet Mishra <A.Mishra@cgiar.org>
 Description: Calculator fOr Land Use harMoNIzation dataSeT.
 License: GPL (>= 3)
 Encoding: UTF-8
