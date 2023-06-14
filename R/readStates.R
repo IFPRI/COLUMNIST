@@ -36,9 +36,10 @@ readStates <- function() {
     cell_area <-  rast(area_name, subds = "carea")
 
     land_use_area <- raster_stack * cell_area
+
     land_use_area <- land_use_area * 1e6 #km2 to m2
     land_use_area <- land_use_area / 1e4 #m2 to ha
-    land_use_area <- land_use_area / 1e6 #ha to mha
+    land_use_area <- land_use_area / 1e3 #ha to 000 ha
 
     return(land_use_area)
 }
