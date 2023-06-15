@@ -4,10 +4,10 @@
 \alias{calcFPUArea}
 \title{calc FPU area based on LUH2 datase}
 \usage{
-calcFPUArea(x)
+calcFPUArea(luh2_states = NULL)
 }
 \arguments{
-\item{x}{An output from readStates function of this package}
+\item{luh2_states}{An output from readStates function of this package}
 }
 \value{
 list. Contains both a dataframe and a SpatVector with FPU level info.
